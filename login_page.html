@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Login Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+            background-image: url('download.jpg');
+            background-size: cover;
+        }
+        .login-container {
+            width: 300px;
+            margin: 120px auto;
+            padding: 10px;
+            border: 2px solid #ccc;
+            border-radius: 5px;
+            background-image: url('loginbg.jpg');
+            background-size: cover;
+        }
+        .message {
+            color: red;
+            font-size: 14px;
+            margin-top: 10px;
+        }
+        .ctf-image {
+            max-width: 100%;
+            height: auto;
+            margin-bottom: 20px;
+        }
+        .login-button {
+            display: inline-block;
+            padding: 10px 20px; /* Adjust padding for button size */
+            background-color: #4CAF50; /* Green background color */
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .login-button:hover {
+            background-color: #45a049; /* Darker green on hover */
+        }
+	.welcome-message {
+            font-size: 24px;
+            text-decoration: underline;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="login-container">
+        <img class="ctf-image" src="ctflogo-trans.png" alt="CTF Challenge">
+        <h2 class="welcome-message">Welcome to the CTF Challenge</h2>
+        <form id="loginForm">
+            <label for="username">Username:</label><br>
+            <input type="text" id="username" name="username" required><br><br>
+            <label for="password">Password:</label><br>
+            <input type="password" id="password" name="password" required><br><br>
+            <button class="login-button" type="button" onclick="showErrorMessage()">Login</button>
+            <p class="message" id="errorMessage"></p>
+        </form>
+    </div>
+
+    <script>
+        function showErrorMessage() {
+            var errorMessage = document.getElementById("errorMessage");
+            errorMessage.innerHTML = "Invalid username or password";
+        }
+    </script>
+</body>
+</html>
